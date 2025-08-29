@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-24T19:21:20.594Z",
+    "end": "2025-08-24T19:21:36.264Z",
+    "duration": 15670,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b16552a0-d016-47c4-a810-992fa76d5c37",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add_to_cart.cy.js",
+      "file": "cypress\\e2e\\add_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8c3133d-a84d-4a00-a92f-a944c0d6d1b5",
+          "title": "Product Page Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow a user to add an item to the cart",
+              "fullTitle": "Product Page Functionality should allow a user to add an item to the cart",
+              "timedOut": null,
+              "duration": 13176,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const ad = new _InventoryPage.default();\nad.visitproduct();\nad.clickonbluetop();\nad.continueshop();\nad.opencart();\nad.verifybluetop();",
+              "err": {},
+              "uuid": "1dc7a5f0-f5f9-4fd0-b7e0-16227dba57eb",
+              "parentUUID": "e8c3133d-a84d-4a00-a92f-a944c0d6d1b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1dc7a5f0-f5f9-4fd0-b7e0-16227dba57eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
