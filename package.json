@@ -15,7 +15,6 @@
   "devDependencies": {
     "@frsource/cypress-plugin-visual-regression-diff": "^1.4.0",
     "cypress": "^15.0.0",
-    "cypress-image-snapshot": "^4.0.1",
     "cypress-xpath": "^2.0.1",
     "mocha": "^11.7.1",
     "mochawesome": "^7.1.3",
