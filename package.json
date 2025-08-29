@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "npx cypress run",
+    "merge:reports": "mochawesome-merge cypress/reports/*.json > mochawesome.json",
+    "generate:report": "marge mochawesome.json",
+    "run:all": "npm run cy:run && npm run merge:reports && npm run generate:report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@frsource/cypress-plugin-visual-regression-diff": "^1.4.0",
+    "cypress": "^15.0.0",
+    "cypress-image-snapshot": "^4.0.1",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
