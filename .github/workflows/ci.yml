@@ -11,13 +11,5 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Cypress Tests
-        run: npx cypress run
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
