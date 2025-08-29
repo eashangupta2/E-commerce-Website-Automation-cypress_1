@@ -15,5 +15,6 @@ describe('Product Page Functionality', () => {
         ad.continueshop();
         ad.opencart();
         ad.verifybluetop();
+        
     })
 }) 

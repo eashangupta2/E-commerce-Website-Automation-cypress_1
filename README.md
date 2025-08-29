@@ -1,2 +1,2 @@
-# E-commerce-Website-Automation-cypress
+# E-commerce-Website-Automation-cypress_1
 This repository contains a robust end-to-end (E2E) automation test suite for an e-commerce website, built using Cypress. The project is designed to validate key user flows and ensure the application's stability and reliability.
