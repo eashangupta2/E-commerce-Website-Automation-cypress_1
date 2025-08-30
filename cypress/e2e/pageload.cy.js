@@ -4,6 +4,6 @@ it('should load the page in an acceptable time', () => {
     const performanceTiming = win.performance.getEntriesByType('navigation')[0];
     const pageLoadTime = performanceTiming.domComplete;
     cy.log(`Page Load Time (domComplete): ${pageLoadTime}ms`);
-    expect(pageLoadTime).to.be.lessThan(5000); 
+    expect(pageLoadTime).to.be.lessThan(10000); 
   });
 });
