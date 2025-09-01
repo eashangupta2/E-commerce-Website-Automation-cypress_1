@@ -25,6 +25,6 @@ jobs:
           ci-build-id: ${{ github.run_id }}
           group: "my-tests"
         env:
-          # Your secret record key is accessed here
+          # Your secret record key is accessed here ok
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
