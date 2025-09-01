@@ -7,12 +7,27 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    # This matrix strategy is the key to parallelization
+    strategy:
+      # This tells GitHub to run 3 separate jobs at the same time
+      matrix:
+        containers: [1, 2, 3]
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Cypress Run
+      - name: Run Cypress Tests
+        # Use the official Cypress GitHub Action
         uses: cypress-io/github-action@v6
         with:
-          reporter: mochawesome
-          reporter-options: '{"reportDir":"cypress/reports","overwrite":false,"html":true,"json":true}'
+          # Your record key should be stored as a GitHub Secret for security
+          record: true
+          # This flag tells Cypress to run tests in parallel
+          parallel: true
+          # This ID links all parallel jobs to a single run on Cypress Cloud
+          ci-build-id: ${{ github.run_id }}
+        env:
+          # Your secret record key is accessed here
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
