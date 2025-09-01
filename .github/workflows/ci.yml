@@ -11,7 +11,7 @@ jobs:
     strategy:
       # This tells GitHub to run 3 separate jobs at the same time
       matrix:
-        containers: [1, 2, 3]
+        containers: [1, 2, 3, 4, 5, 6]
 
     steps:
       - name: Checkout Code
@@ -29,5 +29,5 @@ jobs:
           ci-build-id: ${{ github.run_id }}
         env:
           # Your secret record key is accessed here
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_RECORD_KEY: ${{ secrets.0a3f5c40-db1a-4cc1-8c6f-3261989ba381 }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
