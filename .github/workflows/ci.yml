@@ -7,9 +7,8 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    # This matrix strategy is the key to parallelization
     strategy:
-      # This tells GitHub to run 3 separate jobs at the same time
+      # This tells GitHub to run 6 separate jobs at the same time
       matrix:
         containers: [1, 2, 3, 4, 5, 6]
 
@@ -21,13 +20,11 @@ jobs:
         # Use the official Cypress GitHub Action
         uses: cypress-io/github-action@v6
         with:
-          # Your record key should be stored as a GitHub Secret for security
           record: true
-          # This flag tells Cypress to run tests in parallel
           parallel: true
-          # This ID links all parallel jobs to a single run on Cypress Cloud
           ci-build-id: ${{ github.run_id }}
+          group: "my-tests"
         env:
           # Your secret record key is accessed here
-          CYPRESS_RECORD_KEY: ${{ secrets.0a3f5c40-db1a-4cc1-8c6f-3261989ba381 }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
